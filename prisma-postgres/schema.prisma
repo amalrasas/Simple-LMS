@@ -1,0 +1,15 @@
+ generator client {
+  provider = "prisma-client-js"
+   output="../node_modules/@internal/prisma-postgres/client"
+ }
+
+ datasource db {
+  provider = "postgresql"
+   url      = env("DATABASE_URL_PG")
+ }
+ model comments{
+     id    Int    @id @default(autoincrement()) 
+     content String 
+
+
+}
